@@ -131,10 +131,17 @@
     <ClInclude Include="Enums.h" />
     <ClInclude Include="GreetingFunction.h" />
     <ClInclude Include="InputValidation.h" />
+    <ClInclude Include="ProgramFunctions.h" />
+    <ClInclude Include="StartingFunction.h" />
+    <ClInclude Include="Testing.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GreetingFunction.cpp" />
     <ClCompile Include="InputValidation.cpp" />
+    <ClCompile Include="ProgramFunctions.cpp" />
+    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="StartingFunction.cpp" />
+    <ClCompile Include="Testing.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
