@@ -1,19 +1,19 @@
-//Директивы препроцессора
+п»ї//Р”РёСЂРµРєС‚РёРІС‹ РїСЂРµРїСЂРѕС†РµСЃСЃРѕСЂР°
 #include <iostream>
 
-//Подключаемые библиотеки проекта
+//РџРѕРґРєР»СЋС‡Р°РµРјС‹Рµ Р±РёР±Р»РёРѕС‚РµРєРё РїСЂРѕРµРєС‚Р°
 #include "ProgramFunctions.h"
 
-using namespace std; /*позволяет использовать все идентификаторы
-					   из пространства имён std без указания
-					   префикса std::*/
+using namespace std; /*РїРѕР·РІРѕР»СЏРµС‚ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РІСЃРµ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂС‹
+					   РёР· РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІР° РёРјС‘РЅ std Р±РµР· СѓРєР°Р·Р°РЅРёСЏ
+					   РїСЂРµС„РёРєСЃР° std::*/
 
-/// <summary>Функция для заполнения массива указателями на массив</summary>
-/// <param name="ArrayOfArrays"> - Массив указателей на массив</param>
-/// <param name="FirstArray"> - Первый указатель на массив</param>
-/// <param name="SecondArray"> - Второй указатель на массив</param>
-/// <param name="ThirdArray"> - Третий указатель на массив</param>
-/// <param name="FourthArray"> - Четвертый указатель на массив</param>
+/// <summary>Р¤СѓРЅРєС†РёСЏ РґР»СЏ Р·Р°РїРѕР»РЅРµРЅРёСЏ РјР°СЃСЃРёРІР° СѓРєР°Р·Р°С‚РµР»СЏРјРё РЅР° РјР°СЃСЃРёРІ</summary>
+/// <param name="ArrayOfArrays"> - РњР°СЃСЃРёРІ СѓРєР°Р·Р°С‚РµР»РµР№ РЅР° РјР°СЃСЃРёРІ</param>
+/// <param name="FirstArray"> - РџРµСЂРІС‹Р№ СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РјР°СЃСЃРёРІ</param>
+/// <param name="SecondArray"> - Р’С‚РѕСЂРѕР№ СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РјР°СЃСЃРёРІ</param>
+/// <param name="ThirdArray"> - РўСЂРµС‚РёР№ СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РјР°СЃСЃРёРІ</param>
+/// <param name="FourthArray"> - Р§РµС‚РІРµСЂС‚С‹Р№ СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РјР°СЃСЃРёРІ</param>
 void CompletionArrayOfArrays(int** ArrayOfArrays, int* FirstArray, int* SecondArray, int* ThirdArray, int* FourthArray) {
 	ArrayOfArrays[0] = FirstArray;
 	ArrayOfArrays[1] = SecondArray;
@@ -21,7 +21,7 @@ void CompletionArrayOfArrays(int** ArrayOfArrays, int* FirstArray, int* SecondAr
 	ArrayOfArrays[3] = FourthArray;
 }
 
-/// <summary>Функция тестирования алгоритма сортировки</summary>
+/// <summary>Р¤СѓРЅРєС†РёСЏ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ Р°Р»РіРѕСЂРёС‚РјР° СЃРѕСЂС‚РёСЂРѕРІРєРё</summary>
 void SetTesting(void) {
 
 	bool IsTestFine = true;
@@ -49,14 +49,14 @@ void SetTesting(void) {
 	for (int i = 0; i < size; i++) {
 		for (int j = 0; j < size; j++) {
 			if (ArrayOfArrays[i][j] != ArrayOfTrueArrays[i][j]) {
-				cout << "Ошибка при тестировании в массиве " << i + 1 << "." << endl
-					<< "Ожидалось: " << ArrayOfTrueArrays[i][j] << endl
-					<< "Получено: " << ArrayOfArrays[i][j] << endl;
+				cout << "РћС€РёР±РєР° РїСЂРё С‚РµСЃС‚РёСЂРѕРІР°РЅРёРё РІ РјР°СЃСЃРёРІРµ " << i + 1 << "." << endl
+					<< "РћР¶РёРґР°Р»РѕСЃСЊ: " << ArrayOfTrueArrays[i][j] << endl
+					<< "РџРѕР»СѓС‡РµРЅРѕ: " << ArrayOfArrays[i][j] << endl;
 				IsTestFine = false;
 			}
 		}
 	}
 
-	if (IsTestFine) cout << "Тесты завершены успешно." << endl;
+	if (IsTestFine) cout << "РўРµСЃС‚С‹ Р·Р°РІРµСЂС€РµРЅС‹ СѓСЃРїРµС€РЅРѕ." << endl;
 
 }

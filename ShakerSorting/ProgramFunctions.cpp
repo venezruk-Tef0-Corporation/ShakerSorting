@@ -1,4 +1,4 @@
-//Директивы препроцессора
+п»ї//Р”РёСЂРµРєС‚РёРІС‹ РїСЂРµРїСЂРѕС†РµСЃСЃРѕСЂР°
 #include <iostream>                 
 #include <random>                   
 #include <string>                   
@@ -11,38 +11,38 @@
 #define RangeForElements 100
 #define MinimumForElements 50
 
-//Подключаемые библиотеки проекта
+//РџРѕРґРєР»СЋС‡Р°РµРјС‹Рµ Р±РёР±Р»РёРѕС‚РµРєРё РїСЂРѕРµРєС‚Р°
 #include "Enums.h"
 #include "InputValidation.h"
 
 
-//Пространства имен
+//РџСЂРѕСЃС‚СЂР°РЅСЃС‚РІР° РёРјРµРЅ
 using namespace std;
 using namespace filesystem;
 
-/// <summary>Функция выбора адреса для записи данных</summary>
+/// <summary>Р¤СѓРЅРєС†РёСЏ РІС‹Р±РѕСЂР° Р°РґСЂРµСЃР° РґР»СЏ Р·Р°РїРёСЃРё РґР°РЅРЅС‹С…</summary>
 string AddressTaking(void) {
 	FileRecordItems UserChoice = static_cast<FileRecordItems>(0);
 	string FilePath;
 	bool TryAnotherFile = false;
 	bool IsDataSaved = false;
 	do {
-		cout << "Введите относительный или абсолютный путь файла: ";
+		cout << "Р’РІРµРґРёС‚Рµ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅС‹Р№ РёР»Рё Р°Р±СЃРѕР»СЋС‚РЅС‹Р№ РїСѓС‚СЊ С„Р°Р№Р»Р°: ";
 		getline(cin, FilePath);
 
 		if (fstream(FilePath)) {
 
-			cout << "Файл уже существует" << endl;
+			cout << "Р¤Р°Р№Р» СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚" << endl;
 
 			do {
-				cout << "[1] - Перезаписать существующий файл" << endl;
-				cout << "[2] - Выбрать другой файл" << endl;
-				cout << "Выберите пункт меню: ";
+				cout << "[1] - РџРµСЂРµР·Р°РїРёСЃР°С‚СЊ СЃСѓС‰РµСЃС‚РІСѓСЋС‰РёР№ С„Р°Р№Р»" << endl;
+				cout << "[2] - Р’С‹Р±СЂР°С‚СЊ РґСЂСѓРіРѕР№ С„Р°Р№Р»" << endl;
+				cout << "Р’С‹Р±РµСЂРёС‚Рµ РїСѓРЅРєС‚ РјРµРЅСЋ: ";
 
 				UserChoice = GetFileRecordItem();
 
 				if ((UserChoice != NewFileChoice) && (UserChoice != Rewriting)) {
-					cout << "Выбранный пункт не найден. Повторите ввод: " << endl;
+					cout << "Р’С‹Р±СЂР°РЅРЅС‹Р№ РїСѓРЅРєС‚ РЅРµ РЅР°Р№РґРµРЅ. РџРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ: " << endl;
 				}
 
 			} while ((UserChoice != NewFileChoice) && (UserChoice != Rewriting));
@@ -56,12 +56,12 @@ string AddressTaking(void) {
 		error_code ec{};
 
 		if (!is_regular_file(FilePath, ec)) {
-			cout << "Адрес содержит недопустимые значения" << endl;
+			cout << "РђРґСЂРµСЃ СЃРѕРґРµСЂР¶РёС‚ РЅРµРґРѕРїСѓСЃС‚РёРјС‹Рµ Р·РЅР°С‡РµРЅРёСЏ" << endl;
 			continue;
 		}
 
 		if (!MyFile) {
-			cout << "Запись в этот файл недоступна" << endl;
+			cout << "Р—Р°РїРёСЃСЊ РІ СЌС‚РѕС‚ С„Р°Р№Р» РЅРµРґРѕСЃС‚СѓРїРЅР°" << endl;
 			MyFile.close();
 			continue;
 		}
@@ -71,23 +71,23 @@ string AddressTaking(void) {
 	return FilePath;
 }
 
-/// <summary>Функция записи данных в файл</summary>
-/// <param name="FileArray"> - Записываемый в файл массив</param>
-/// <param name="SizeOfArray"> - Записываемый в файл размер массива</param>
+/// <summary>Р¤СѓРЅРєС†РёСЏ Р·Р°РїРёСЃРё РґР°РЅРЅС‹С… РІ С„Р°Р№Р»</summary>
+/// <param name="FileArray"> - Р—Р°РїРёСЃС‹РІР°РµРјС‹Р№ РІ С„Р°Р№Р» РјР°СЃСЃРёРІ</param>
+/// <param name="SizeOfArray"> - Р—Р°РїРёСЃС‹РІР°РµРјС‹Р№ РІ С„Р°Р№Р» СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР°</param>
 void WritingTheDataToFile(int* FileArray, int SizeOfArray) {
 	WriteDataMenuItems UserChoice = static_cast<WriteDataMenuItems>(0);
 	string PathName = "";
 	ofstream File;
-	cout << "Записать данные в файл?" << endl;
-	cout << "[1] - Записать данные в файл" << endl;
-	cout << "[2] - Продолжить без записи" << endl;
-	cout << "Выберите пункт меню: ";
+	cout << "Р—Р°РїРёСЃР°С‚СЊ РґР°РЅРЅС‹Рµ РІ С„Р°Р№Р»?" << endl;
+	cout << "[1] - Р—Р°РїРёСЃР°С‚СЊ РґР°РЅРЅС‹Рµ РІ С„Р°Р№Р»" << endl;
+	cout << "[2] - РџСЂРѕРґРѕР»Р¶РёС‚СЊ Р±РµР· Р·Р°РїРёСЃРё" << endl;
+	cout << "Р’С‹Р±РµСЂРёС‚Рµ РїСѓРЅРєС‚ РјРµРЅСЋ: ";
 
 	do {
 		UserChoice = GetWriteDataMenuItem();
 		switch (UserChoice) {
 			case Writing:
-				cout << "Сохранение в файл" << endl;
+				cout << "РЎРѕС…СЂР°РЅРµРЅРёРµ РІ С„Р°Р№Р»" << endl;
 				PathName = AddressTaking();
 				File.open(PathName.c_str(), ios_base::trunc | ios_base::out);
 				if (File.is_open()) {
@@ -95,11 +95,11 @@ void WritingTheDataToFile(int* FileArray, int SizeOfArray) {
 					File << "[ ";
 					for (int i = 0; i < SizeOfArray; i++) File << FileArray[i] << " ";
 					File << "]";
-					cout << "Данные сохранены" << endl;
+					cout << "Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹" << endl;
 					File.close();
 				}
 				else {
-					cout << "Файл недоступен для записи" << endl;
+					cout << "Р¤Р°Р№Р» РЅРµРґРѕСЃС‚СѓРїРµРЅ РґР»СЏ Р·Р°РїРёСЃРё" << endl;
 					File.close();
 				}
 				break;
@@ -108,25 +108,25 @@ void WritingTheDataToFile(int* FileArray, int SizeOfArray) {
 				break;
 
 			default:
-				cout << "Введённый пункт отсутствует. Повторите ввод: ";
+				cout << "Р’РІРµРґС‘РЅРЅС‹Р№ РїСѓРЅРєС‚ РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚. РџРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ: ";
 				break;
 		}
 
 	} while ((UserChoice != Writing) && (UserChoice != Cancelling));
 }
 
-/// <summary>Функция вывода отсортированного массива</summary>
-/// <param name="SortedArray"> - Отсортированный массив</param>
-/// <param name="SizeOfArray"> - Размер массива</param>
+/// <summary>Р¤СѓРЅРєС†РёСЏ РІС‹РІРѕРґР° РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅРѕРіРѕ РјР°СЃСЃРёРІР°</summary>
+/// <param name="SortedArray"> - РћС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ</param>
+/// <param name="SizeOfArray"> - Р Р°Р·РјРµСЂ РјР°СЃСЃРёРІР°</param>
 void ShowSortedArray(int* SortedArray, int SizeOfArray) {
-	cout << "Отсортированный массив: [ ";
+	cout << "РћС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ: [ ";
 	for (int i = 0; i < SizeOfArray; i++) cout << SortedArray[i] << " ";
 	cout << "]" << endl;
 }
 
-/// <summary>Функция сортировки массива</summary>
-/// <param name="ArrayForSorting"> - Исходный массив</param>
-/// <param name="SizeOfArray"> - Размер массива</param>
+/// <summary>Р¤СѓРЅРєС†РёСЏ СЃРѕСЂС‚РёСЂРѕРІРєРё РјР°СЃСЃРёРІР°</summary>
+/// <param name="ArrayForSorting"> - РСЃС…РѕРґРЅС‹Р№ РјР°СЃСЃРёРІ</param>
+/// <param name="SizeOfArray"> - Р Р°Р·РјРµСЂ РјР°СЃСЃРёРІР°</param>
 void ShakerSorting(int* ArrayForSorting, int SizeOfArray) {
 
 	bool IsSwapped = true;
@@ -136,7 +136,7 @@ void ShakerSorting(int* ArrayForSorting, int SizeOfArray) {
 	while (IsSwapped) {
 		IsSwapped = false;
 
-		// Проходим снизу вверх
+		// РџСЂРѕС…РѕРґРёРј СЃРЅРёР·Сѓ РІРІРµСЂС…
 		for (int i = Start; i < End; ++i) {
 			if (ArrayForSorting[i] > ArrayForSorting[i + 1]) {
 				swap(ArrayForSorting[i], ArrayForSorting[i + 1]);
@@ -144,16 +144,16 @@ void ShakerSorting(int* ArrayForSorting, int SizeOfArray) {
 			}
 		}
 
-		// Если не было перестановок, то сортировка уже выполнена
+		// Р•СЃР»Рё РЅРµ Р±С‹Р»Рѕ РїРµСЂРµСЃС‚Р°РЅРѕРІРѕРє, С‚Рѕ СЃРѕСЂС‚РёСЂРѕРІРєР° СѓР¶Рµ РІС‹РїРѕР»РЅРµРЅР°
 		if (!IsSwapped)
 			break;
 
 		IsSwapped = false;
 
-		// Уменьшаем окончание на 1, так как самый большой элемент уже находится на правильной позиции
+		// РЈРјРµРЅСЊС€Р°РµРј РѕРєРѕРЅС‡Р°РЅРёРµ РЅР° 1, С‚Р°Рє РєР°Рє СЃР°РјС‹Р№ Р±РѕР»СЊС€РѕР№ СЌР»РµРјРµРЅС‚ СѓР¶Рµ РЅР°С…РѕРґРёС‚СЃСЏ РЅР° РїСЂР°РІРёР»СЊРЅРѕР№ РїРѕР·РёС†РёРё
 		--End;
 
-		// Проходим сверху вниз
+		// РџСЂРѕС…РѕРґРёРј СЃРІРµСЂС…Сѓ РІРЅРёР·
 		for (int i = End - 1; i >= Start; --i) {
 			if (ArrayForSorting[i] > ArrayForSorting[i + 1]) {
 				swap(ArrayForSorting[i], ArrayForSorting[i + 1]);
@@ -161,17 +161,17 @@ void ShakerSorting(int* ArrayForSorting, int SizeOfArray) {
 			}
 		}
 
-		// Увеличиваем начало на 1, так как самый маленький элемент уже находится на правильной позиции
+		// РЈРІРµР»РёС‡РёРІР°РµРј РЅР°С‡Р°Р»Рѕ РЅР° 1, С‚Р°Рє РєР°Рє СЃР°РјС‹Р№ РјР°Р»РµРЅСЊРєРёР№ СЌР»РµРјРµРЅС‚ СѓР¶Рµ РЅР°С…РѕРґРёС‚СЃСЏ РЅР° РїСЂР°РІРёР»СЊРЅРѕР№ РїРѕР·РёС†РёРё
 		++Start;
 	}
 
 }
 
-/// <summary>Функция заполнения массива случайными значениями</summary>
+/// <summary>Р¤СѓРЅРєС†РёСЏ Р·Р°РїРѕР»РЅРµРЅРёСЏ РјР°СЃСЃРёРІР° СЃР»СѓС‡Р°Р№РЅС‹РјРё Р·РЅР°С‡РµРЅРёСЏРјРё</summary>
 void AutoEntering(void) {
 
 	int ArraySize = rand() % RangeForSize + rand() % MinimumForSize;
-	cout << "Рандомайзер выбрал размер массива = " << ArraySize << endl;
+	cout << "Р Р°РЅРґРѕРјР°Р№Р·РµСЂ РІС‹Р±СЂР°Р» СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР° = " << ArraySize << endl;
 
 	int* Array = new int[ArraySize];
 
@@ -179,7 +179,7 @@ void AutoEntering(void) {
 		Array[i] = rand() % RangeForElements - MinimumForElements;
 	}
 
-	cout << "Рандомайзер заполнил массив: [ ";
+	cout << "Р Р°РЅРґРѕРјР°Р№Р·РµСЂ Р·Р°РїРѕР»РЅРёР» РјР°СЃСЃРёРІ: [ ";
 	for (int i = 0; i < ArraySize; i++) {
 		cout << Array[i] << " ";
 	}
@@ -190,24 +190,24 @@ void AutoEntering(void) {
 	WritingTheDataToFile(Array, ArraySize);
 }
 
-/// <summary>Функция заполнения массива с клавиатуры</summary>
+/// <summary>Р¤СѓРЅРєС†РёСЏ Р·Р°РїРѕР»РЅРµРЅРёСЏ РјР°СЃСЃРёРІР° СЃ РєР»Р°РІРёР°С‚СѓСЂС‹</summary>
 void ManualEntering(void) {
 
 	int ArraySize = 0;
-	cout << "Введите размер массива: ";
+	cout << "Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР°: ";
 	do {
 		ArraySize = GetInt();
-		if (ArraySize <= 0) cout << "Ошибка ввода. Повторите ввод: ";
+		if (ArraySize <= 0) cout << "РћС€РёР±РєР° РІРІРѕРґР°. РџРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ: ";
 	} while (ArraySize <= 0);
 
 	int* Array = new int[ArraySize];
 
 	for (int i = 0; i < ArraySize; i++) {
-		cout << "Введите " << i + 1 << " элемент: ";
+		cout << "Р’РІРµРґРёС‚Рµ " << i + 1 << " СЌР»РµРјРµРЅС‚: ";
 		Array[i] = GetInt();
 	}
 
-	cout << "Введенный массив: " << endl;
+	cout << "Р’РІРµРґРµРЅРЅС‹Р№ РјР°СЃСЃРёРІ: " << endl;
 	cout << "[ ";
 	for (int i = 0; i < ArraySize; i++) cout << Array[i] << " ";
 	cout << "]" << endl;
@@ -217,16 +217,16 @@ void ManualEntering(void) {
 	WritingTheDataToFile(Array, ArraySize);
 }
 
-/// <summary>Функция выбора способа заполнения массива</summary>
+/// <summary>Р¤СѓРЅРєС†РёСЏ РІС‹Р±РѕСЂР° СЃРїРѕСЃРѕР±Р° Р·Р°РїРѕР»РЅРµРЅРёСЏ РјР°СЃСЃРёРІР°</summary>
 void ProgramEntering(void) {
 
 	EnteringMenuItems UserChoice = static_cast<EnteringMenuItems>(0);
 
 	do {
 
-		cout << "[1] - Заполнить массив вручную" << endl;
-		cout << "[2] - Заполнить массив случайными значениями" << endl;
-		cout << "Выберите пункт меню: ";
+		cout << "[1] - Р—Р°РїРѕР»РЅРёС‚СЊ РјР°СЃСЃРёРІ РІСЂСѓС‡РЅСѓСЋ" << endl;
+		cout << "[2] - Р—Р°РїРѕР»РЅРёС‚СЊ РјР°СЃСЃРёРІ СЃР»СѓС‡Р°Р№РЅС‹РјРё Р·РЅР°С‡РµРЅРёСЏРјРё" << endl;
+		cout << "Р’С‹Р±РµСЂРёС‚Рµ РїСѓРЅРєС‚ РјРµРЅСЋ: ";
 
 		UserChoice = GetEnteringMenuItem();
 
@@ -240,7 +240,7 @@ void ProgramEntering(void) {
 				break;
 
 			default:
-				cout << "Введённый пункт не найден. Повторите ввод." << endl;
+				cout << "Р’РІРµРґС‘РЅРЅС‹Р№ РїСѓРЅРєС‚ РЅРµ РЅР°Р№РґРµРЅ. РџРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ." << endl;
 				break;
 		}
 	} while ((UserChoice != ManualEnter) && (UserChoice != AutoEnter));
