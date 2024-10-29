@@ -8,7 +8,7 @@ using namespace std; /*позволяет использовать все идентификаторы
 					   из пространства имён std без указания
 					   префикса std::*/
 
-/// <summary>CompletionArrayOfArrays - Функция для заполнения массива указателями на массив</summary>
+/// <summary>Функция для заполнения массива указателями на массив</summary>
 /// <param name="ArrayOfArrays"> - Массив указателей на массив</param>
 /// <param name="FirstArray"> - Первый указатель на массив</param>
 /// <param name="SecondArray"> - Второй указатель на массив</param>
@@ -21,7 +21,7 @@ void CompletionArrayOfArrays(int** ArrayOfArrays, int* FirstArray, int* SecondAr
 	ArrayOfArrays[3] = FourthArray;
 }
 
-/// <summary>SetTesting - Функция тестирования сортировки</summary>
+/// <summary>Функция тестирования алгоритма сортировки</summary>
 void SetTesting(void) {
 
 	bool IsTestFine = true;

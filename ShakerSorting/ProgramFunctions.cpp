@@ -20,7 +20,7 @@
 using namespace std;
 using namespace filesystem;
 
-/// <summary>AddressTaking - Функция выбора адреса для записи данных</summary>
+/// <summary>Функция выбора адреса для записи данных</summary>
 string AddressTaking(void) {
 	FileRecordItems UserChoice = static_cast<FileRecordItems>(0);
 	string FilePath;
@@ -71,7 +71,7 @@ string AddressTaking(void) {
 	return FilePath;
 }
 
-/// <summary>WritingTheDataToFile - Функция записи данных в файл</summary>
+/// <summary>Функция записи данных в файл</summary>
 /// <param name="FileArray"> - Записываемый в файл массив</param>
 /// <param name="SizeOfArray"> - Записываемый в файл размер массива</param>
 void WritingTheDataToFile(int* FileArray, int SizeOfArray) {
@@ -115,7 +115,7 @@ void WritingTheDataToFile(int* FileArray, int SizeOfArray) {
 	} while ((UserChoice != Writing) && (UserChoice != Cancelling));
 }
 
-/// <summary>ShowSortedArray - Функция вывода отсортированного массива</summary>
+/// <summary>Функция вывода отсортированного массива</summary>
 /// <param name="SortedArray"> - Отсортированный массив</param>
 /// <param name="SizeOfArray"> - Размер массива</param>
 void ShowSortedArray(int* SortedArray, int SizeOfArray) {
@@ -124,7 +124,7 @@ void ShowSortedArray(int* SortedArray, int SizeOfArray) {
 	cout << "]" << endl;
 }
 
-/// <summary>ShowSortedArray - Функция сортировки массива</summary>
+/// <summary>Функция сортировки массива</summary>
 /// <param name="ArrayForSorting"> - Исходный массив</param>
 /// <param name="SizeOfArray"> - Размер массива</param>
 void ShakerSorting(int* ArrayForSorting, int SizeOfArray) {
@@ -167,13 +167,7 @@ void ShakerSorting(int* ArrayForSorting, int SizeOfArray) {
 
 }
 
-/// <summary>AutoEntering - Функция заполнения массива случайными значениями</summary>
-/// <param name="ArraySize"> - Размер массива, определямый случайным образом</param>
-/// <param name="RangeForSize"> - Длина выборки для случайного значения размера</param>
-/// <param name="MinimumForSize"> - Младший элемент выборки для случайного значения размера</param>
-/// <param name="Array"> - Массив, заполняемый случайными значениями</param>
-/// <param name="RangeForElements"> - Длина выборки для случайного значения элемента</param>
-/// <param name="MinimumForElements"> - Младший элемент выборки для случайного значения элемента</param>
+/// <summary>Функция заполнения массива случайными значениями</summary>
 void AutoEntering(void) {
 
 	int ArraySize = rand() % RangeForSize + rand() % MinimumForSize;
@@ -196,9 +190,7 @@ void AutoEntering(void) {
 	WritingTheDataToFile(Array, ArraySize);
 }
 
-/// <summary>ManualEntering - Функция заполнения массива с клавиатуры</summary>
-/// <param name="ArraySize"> - Размер массива, вводимый с клавиатуры</param>
-/// <param name="Array"> - Массив, элементы которого вводятся с клавиатуры</param>
+/// <summary>Функция заполнения массива с клавиатуры</summary>
 void ManualEntering(void) {
 
 	int ArraySize = 0;
@@ -225,8 +217,7 @@ void ManualEntering(void) {
 	WritingTheDataToFile(Array, ArraySize);
 }
 
-/// <summary>AutoEntering - Функция выбора способа заполнения массива</summary>
-/// <param name="UserChoice"> - Используется для считывания выбранного пункта меню</param>
+/// <summary>Функция выбора способа заполнения массива</summary>
 void ProgramEntering(void) {
 
 	EnteringMenuItems UserChoice = static_cast<EnteringMenuItems>(0);
