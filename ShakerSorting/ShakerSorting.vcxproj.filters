@@ -21,7 +21,7 @@
     <ClInclude Include="GreetingFunction.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\OneDrive\Рабочий стол\РПС\Лабораторная работа №2\ShakerSorting\ShakerSorting\InputValidation.h">
+    <ClInclude Include="InputValidation.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
@@ -29,7 +29,7 @@
     <ClCompile Include="GreetingFunction.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\OneDrive\Рабочий стол\РПС\Лабораторная работа №2\ShakerSorting\ShakerSorting\InputValidation.cpp">
+    <ClCompile Include="InputValidation.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

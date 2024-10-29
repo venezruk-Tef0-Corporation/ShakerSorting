@@ -128,13 +128,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\OneDrive\Рабочий стол\РПС\Лабораторная работа №2\ShakerSorting\ShakerSorting\InputValidation.h" />
     <ClInclude Include="Enums.h" />
     <ClInclude Include="GreetingFunction.h" />
+    <ClInclude Include="InputValidation.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\OneDrive\Рабочий стол\РПС\Лабораторная работа №2\ShakerSorting\ShakerSorting\InputValidation.cpp" />
     <ClCompile Include="GreetingFunction.cpp" />
+    <ClCompile Include="InputValidation.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

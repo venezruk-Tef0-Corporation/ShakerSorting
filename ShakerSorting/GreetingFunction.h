@@ -5,4 +5,4 @@
 			   исходного кода*/
 
 			   //ќбъ€вление функции вывода текста приветстви€
-void ShowGreeting(void); #pragma once
+void ShowGreeting(void);
