@@ -28,27 +28,27 @@ T GetInput(void) {
 	return UserInput;
 }
 
-/// <summary>GetInt - Функция на проверку целочисленного ввода с использованием шаблонной функции</summary>
+/// <summary>Функция на проверку целочисленного ввода с использованием шаблонной функции</summary>
 int GetInt(void) {
 	return GetInput<int>();
 }
 
-/// <summary>GetMainMenuItem - Функция на проверку ввода пункта главного меню с использованием функции на проверку ввода целого числа</summary>
+/// <summary>Функция на проверку ввода пункта главного меню с использованием функции на проверку ввода целого числа</summary>
 MainMenuItems GetMainMenuItem(void) {
 	return static_cast<MainMenuItems>(GetInt());
 }
 
-/// <summary>GetMainMenuItem - Функция на проверку ввода пункта следующего за главным меню с использованием функции на проверку ввода целого числа</summary>
+/// <summary>Функция на проверку ввода пункта следующего за главным меню с использованием функции на проверку ввода целого числа</summary>
 EnteringMenuItems GetEnteringMenuItem(void) {
 	return static_cast<EnteringMenuItems>(GetInt());
 }
 
-/// <summary>GetMainMenuItem - Функция на проверку ввода пункта меню для выбора записи с использованием функции на проверку ввода целого числа</summary>
+/// <summary>Функция на проверку ввода пункта меню для выбора записи с использованием функции на проверку ввода целого числа</summary>
 WriteDataMenuItems GetWriteDataMenuItem(void) {
 	return static_cast<WriteDataMenuItems>(GetInt());
 }
 
-/// <summary>GetMainMenuItem - Функция на проверку ввода пункта меню для выбора места для записи с использованием функции на проверку ввода целого числа </summary>
+/// <summary>Функция на проверку ввода пункта меню для выбора места для записи с использованием функции на проверку ввода целого числа </summary>
 FileRecordItems GetFileRecordItem(void) {
 	return static_cast<FileRecordItems>(GetInt());
 }
