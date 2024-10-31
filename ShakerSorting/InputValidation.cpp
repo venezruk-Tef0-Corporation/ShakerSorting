@@ -49,6 +49,6 @@ WriteDataMenuItems GetWriteDataMenuItem(void) {
 }
 
 /// <summary>Функция на проверку ввода пункта меню для выбора места для записи с использованием функции на проверку ввода целого числа </summary>
-FileRecordItems GetFileRecordItem(void) {
-	return static_cast<FileRecordItems>(GetInt());
+AddressTakingItems GetAddressTakingItem(void) {
+	return static_cast<AddressTakingItems>(GetInt());
 }

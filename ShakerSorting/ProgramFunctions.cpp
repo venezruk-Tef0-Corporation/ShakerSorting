@@ -22,7 +22,7 @@ using namespace filesystem;
 
 /// <summary>Функция выбора адреса для записи данных</summary>
 string AddressTaking(void) {
-	FileRecordItems UserChoice = static_cast<FileRecordItems>(0);
+	AddressTakingItems UserChoice = static_cast<AddressTakingItems>(0);
 	string FilePath;
 	bool TryAnotherFile = false;
 	bool IsDataSaved = false;
@@ -39,7 +39,7 @@ string AddressTaking(void) {
 				cout << "[2] - Выбрать другой файл" << endl;
 				cout << "Выберите пункт меню: ";
 
-				UserChoice = GetFileRecordItem();
+				UserChoice = GetAddressTakingItem();
 
 				if ((UserChoice != NewFileChoice) && (UserChoice != Rewriting)) {
 					cout << "Выбранный пункт не найден. Повторите ввод: " << endl;
