@@ -8,8 +8,8 @@
 #include "Testing.h"
 
 using namespace std; /*позволяет использовать все идентификаторы 
-					   из пространства имён std без указания 
-					   префикса std::*/
+		       из пространства имён std без указания 
+		       префикса std::*/
 
 /// <summary>Функция главного меню</summary>
 void ProgramStarting(void) {
