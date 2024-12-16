@@ -93,6 +93,7 @@ namespace GraphicalShakerSorting {
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(RootMenu::typeid));
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
+			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -104,7 +105,6 @@ namespace GraphicalShakerSorting {
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
 			this->linkLabel1 = (gcnew System::Windows::Forms::LinkLabel());
-			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
@@ -133,13 +133,24 @@ namespace GraphicalShakerSorting {
 			this->tabPage1->BackColor = System::Drawing::Color::White;
 			this->tabPage1->Controls->Add(this->label4);
 			this->tabPage1->ForeColor = System::Drawing::Color::White;
-			this->tabPage1->Location = System::Drawing::Point(4, 22);
+			this->tabPage1->Location = System::Drawing::Point(4, 28);
 			this->tabPage1->Name = L"tabPage1";
 			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage1->Size = System::Drawing::Size(1408, 1005);
+			this->tabPage1->Size = System::Drawing::Size(1408, 999);
 			this->tabPage1->TabIndex = 0;
 			this->tabPage1->Text = L"Главное меню";
 			this->tabPage1->Click += gcnew System::EventHandler(this, &RootMenu::tabPage1_Click);
+			// 
+			// label4
+			// 
+			this->label4->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label4->ForeColor = System::Drawing::Color::Black;
+			this->label4->Location = System::Drawing::Point(7, 12);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(1220, 445);
+			this->label4->TabIndex = 1;
+			this->label4->Text = resources->GetString(L"label4.Text");
 			// 
 			// tabPage4
 			// 
@@ -151,9 +162,9 @@ namespace GraphicalShakerSorting {
 			this->tabPage4->Controls->Add(this->button1);
 			this->tabPage4->Controls->Add(this->textBox5);
 			this->tabPage4->ForeColor = System::Drawing::Color::White;
-			this->tabPage4->Location = System::Drawing::Point(4, 22);
+			this->tabPage4->Location = System::Drawing::Point(4, 28);
 			this->tabPage4->Name = L"tabPage4";
-			this->tabPage4->Size = System::Drawing::Size(1408, 1005);
+			this->tabPage4->Size = System::Drawing::Size(1408, 999);
 			this->tabPage4->TabIndex = 3;
 			this->tabPage4->Text = L"Сортировка";
 			this->tabPage4->Click += gcnew System::EventHandler(this, &RootMenu::tabPage4_Click);
@@ -166,7 +177,7 @@ namespace GraphicalShakerSorting {
 			this->label2->ForeColor = System::Drawing::Color::Black;
 			this->label2->Location = System::Drawing::Point(322, 322);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(243, 25);
+			this->label2->Size = System::Drawing::Size(307, 32);
 			this->label2->TabIndex = 7;
 			this->label2->Text = L"Отсортированный массив:";
 			this->label2->Visible = false;
@@ -180,7 +191,7 @@ namespace GraphicalShakerSorting {
 			this->label1->ForeColor = System::Drawing::Color::Black;
 			this->label1->Location = System::Drawing::Point(322, 97);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(383, 25);
+			this->label1->Size = System::Drawing::Size(491, 32);
 			this->label1->TabIndex = 6;
 			this->label1->Text = L"Введите элементы массива через запятую:";
 			this->label1->Click += gcnew System::EventHandler(this, &RootMenu::label1_Click_1);
@@ -198,7 +209,7 @@ namespace GraphicalShakerSorting {
 			this->button2->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->button2->Location = System::Drawing::Point(575, 401);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(201, 33);
+			this->button2->Size = System::Drawing::Size(201, 37);
 			this->button2->TabIndex = 5;
 			this->button2->Text = L"СОХРАНИТЬ";
 			this->button2->UseVisualStyleBackColor = false;
@@ -234,7 +245,7 @@ namespace GraphicalShakerSorting {
 			this->button1->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->button1->Location = System::Drawing::Point(575, 176);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(201, 33);
+			this->button1->Size = System::Drawing::Size(201, 37);
 			this->button1->TabIndex = 2;
 			this->button1->Text = L"СОРТИРОВАТЬ";
 			this->button1->UseVisualStyleBackColor = false;
@@ -258,10 +269,10 @@ namespace GraphicalShakerSorting {
 			this->tabPage2->BackColor = System::Drawing::Color::White;
 			this->tabPage2->Controls->Add(this->dataGridView1);
 			this->tabPage2->ForeColor = System::Drawing::Color::White;
-			this->tabPage2->Location = System::Drawing::Point(4, 22);
+			this->tabPage2->Location = System::Drawing::Point(4, 28);
 			this->tabPage2->Name = L"tabPage2";
 			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage2->Size = System::Drawing::Size(1408, 1005);
+			this->tabPage2->Size = System::Drawing::Size(1408, 999);
 			this->tabPage2->TabIndex = 1;
 			this->tabPage2->Text = L"Список массивов";
 			// 
@@ -283,9 +294,9 @@ namespace GraphicalShakerSorting {
 			this->tabPage3->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->tabPage3->ForeColor = System::Drawing::Color::White;
-			this->tabPage3->Location = System::Drawing::Point(4, 22);
+			this->tabPage3->Location = System::Drawing::Point(4, 28);
 			this->tabPage3->Name = L"tabPage3";
-			this->tabPage3->Size = System::Drawing::Size(1408, 1005);
+			this->tabPage3->Size = System::Drawing::Size(1408, 999);
 			this->tabPage3->TabIndex = 2;
 			this->tabPage3->Text = L"О нас";
 			this->tabPage3->UseVisualStyleBackColor = true;
@@ -297,38 +308,27 @@ namespace GraphicalShakerSorting {
 			this->linkLabel1->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->linkLabel1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.14286F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->linkLabel1->Location = System::Drawing::Point(164, 250);
+			this->linkLabel1->Location = System::Drawing::Point(172, 261);
 			this->linkLabel1->Name = L"linkLabel1";
 			this->linkLabel1->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->linkLabel1->Size = System::Drawing::Size(402, 25);
+			this->linkLabel1->Size = System::Drawing::Size(510, 32);
 			this->linkLabel1->TabIndex = 1;
 			this->linkLabel1->TabStop = true;
 			this->linkLabel1->Text = L"https://github.com/venezruk-Tef0-Corporation";
 			this->linkLabel1->LinkClicked += gcnew System::Windows::Forms::LinkLabelLinkClickedEventHandler(this, &RootMenu::linkLabel1_LinkClicked);
-			// 
-			// label4
-			// 
-			this->label4->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->label4->ForeColor = System::Drawing::Color::Black;
-			this->label4->Location = System::Drawing::Point(7, 12);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(1220, 445);
-			this->label4->TabIndex = 1;
-			this->label4->Text = resources->GetString(L"label4.Text");
 			// 
 			// label5
 			// 
 			this->label5->ForeColor = System::Drawing::Color::Black;
 			this->label5->Location = System::Drawing::Point(7, 13);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(1396, 275);
+			this->label5->Size = System::Drawing::Size(1396, 415);
 			this->label5->TabIndex = 3;
 			this->label5->Text = resources->GetString(L"label5.Text");
 			// 
 			// RootMenu
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 19);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoSize = true;
 			this->AutoValidate = System::Windows::Forms::AutoValidate::EnablePreventFocusChange;
