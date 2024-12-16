@@ -63,8 +63,10 @@ namespace GraphicalShakerSorting {
 
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::Label^ label5;
+
+
 
 
 
@@ -91,7 +93,6 @@ namespace GraphicalShakerSorting {
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(RootMenu::typeid));
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
-			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -103,7 +104,8 @@ namespace GraphicalShakerSorting {
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
 			this->linkLabel1 = (gcnew System::Windows::Forms::LinkLabel());
-			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			this->tabPage4->SuspendLayout();
@@ -138,18 +140,6 @@ namespace GraphicalShakerSorting {
 			this->tabPage1->TabIndex = 0;
 			this->tabPage1->Text = L"Главное меню";
 			this->tabPage1->Click += gcnew System::EventHandler(this, &RootMenu::tabPage1_Click);
-			// 
-			// label4
-			// 
-			this->label4->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->label4->ForeColor = System::Drawing::Color::Black;
-			this->label4->Location = System::Drawing::Point(6, 3);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(1220, 445);
-			this->label4->TabIndex = 0;
-			this->label4->Text = resources->GetString(L"label4.Text");
-			this->label4->Click += gcnew System::EventHandler(this, &RootMenu::label4_Click);
 			// 
 			// tabPage4
 			// 
@@ -289,7 +279,7 @@ namespace GraphicalShakerSorting {
 			// tabPage3
 			// 
 			this->tabPage3->Controls->Add(this->linkLabel1);
-			this->tabPage3->Controls->Add(this->label3);
+			this->tabPage3->Controls->Add(this->label5);
 			this->tabPage3->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->tabPage3->ForeColor = System::Drawing::Color::White;
@@ -316,15 +306,25 @@ namespace GraphicalShakerSorting {
 			this->linkLabel1->Text = L"https://github.com/venezruk-Tef0-Corporation";
 			this->linkLabel1->LinkClicked += gcnew System::Windows::Forms::LinkLabelLinkClickedEventHandler(this, &RootMenu::linkLabel1_LinkClicked);
 			// 
-			// label3
+			// label4
 			// 
-			this->label3->ForeColor = System::Drawing::Color::Black;
-			this->label3->Location = System::Drawing::Point(0, 0);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(1399, 287);
-			this->label3->TabIndex = 2;
-			this->label3->Text = resources->GetString(L"label3.Text");
-			this->label3->Click += gcnew System::EventHandler(this, &RootMenu::label3_Click);
+			this->label4->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label4->ForeColor = System::Drawing::Color::Black;
+			this->label4->Location = System::Drawing::Point(7, 12);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(1220, 445);
+			this->label4->TabIndex = 1;
+			this->label4->Text = resources->GetString(L"label4.Text");
+			// 
+			// label5
+			// 
+			this->label5->ForeColor = System::Drawing::Color::Black;
+			this->label5->Location = System::Drawing::Point(7, 13);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(1396, 275);
+			this->label5->TabIndex = 3;
+			this->label5->Text = resources->GetString(L"label5.Text");
 			// 
 			// RootMenu
 			// 

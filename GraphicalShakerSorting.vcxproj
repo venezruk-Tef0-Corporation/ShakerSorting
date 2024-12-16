@@ -127,11 +127,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RootMenu.cpp" />
+    <ClCompile Include="ShakerSorting.cpp" />
+    <ClCompile Include="SystemStrToStdstring.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RootMenu.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="ShakerSorting.h" />
+    <ClInclude Include="SystemStrToStdstring.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="RootMenu.resx">
