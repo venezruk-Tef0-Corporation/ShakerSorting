@@ -126,9 +126,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\Desktop\GraphicalShakerSorting\ShakerSorting.cpp" />
+    <ClCompile Include="..\..\..\Desktop\GraphicalShakerSorting\SystemStrToStdstring.cpp" />
     <ClCompile Include="RootMenu.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\Desktop\GraphicalShakerSorting\ShakerSorting.h" />
+    <ClInclude Include="..\..\..\Desktop\GraphicalShakerSorting\SystemStrToStdstring.h" />
     <ClInclude Include="RootMenu.h">
       <FileType>CppForm</FileType>
     </ClInclude>

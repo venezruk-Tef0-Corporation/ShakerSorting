@@ -18,9 +18,21 @@
     <ClCompile Include="RootMenu.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Desktop\GraphicalShakerSorting\ShakerSorting.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Desktop\GraphicalShakerSorting\SystemStrToStdstring.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RootMenu.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Desktop\GraphicalShakerSorting\SystemStrToStdstring.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Desktop\GraphicalShakerSorting\ShakerSorting.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
