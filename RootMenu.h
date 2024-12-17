@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 
 #include "ShakerSorting.h"
 #include "SystemStrToStdstring.h"
@@ -18,7 +18,7 @@ namespace GraphicalShakerSorting {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Сводка для RootMenu
+	/// РЎРІРѕРґРєР° РґР»СЏ RootMenu
 	/// </summary>
 	public ref class RootMenu : public System::Windows::Forms::Form
 	{
@@ -27,13 +27,13 @@ namespace GraphicalShakerSorting {
 		{
 			InitializeComponent();
 			//
-			//TODO: добавьте код конструктора
+			//TODO: РґРѕР±Р°РІСЊС‚Рµ РєРѕРґ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°
 			//
 		}
 
 	protected:
 		/// <summary>
-		/// Освободить все используемые ресурсы.
+		/// РћСЃРІРѕР±РѕРґРёС‚СЊ РІСЃРµ РёСЃРїРѕР»СЊР·СѓРµРјС‹Рµ СЂРµСЃСѓСЂСЃС‹.
 		/// </summary>
 		~RootMenu()
 		{
@@ -79,14 +79,14 @@ namespace GraphicalShakerSorting {
 
 	private:
 		/// <summary>
-		/// Обязательная переменная конструктора.
+		/// РћР±СЏР·Р°С‚РµР»СЊРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°.
 		/// </summary>
 		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Требуемый метод для поддержки конструктора — не изменяйте 
-		/// содержимое этого метода с помощью редактора кода.
+		/// РўСЂРµР±СѓРµРјС‹Р№ РјРµС‚РѕРґ РґР»СЏ РїРѕРґРґРµСЂР¶РєРё РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° вЂ” РЅРµ РёР·РјРµРЅСЏР№С‚Рµ 
+		/// СЃРѕРґРµСЂР¶РёРјРѕРµ СЌС‚РѕРіРѕ РјРµС‚РѕРґР° СЃ РїРѕРјРѕС‰СЊСЋ СЂРµРґР°РєС‚РѕСЂР° РєРѕРґР°.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -138,7 +138,7 @@ namespace GraphicalShakerSorting {
 			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
 			this->tabPage1->Size = System::Drawing::Size(1408, 1005);
 			this->tabPage1->TabIndex = 0;
-			this->tabPage1->Text = L"Главное меню";
+			this->tabPage1->Text = L"Р“Р»Р°РІРЅРѕРµ РјРµРЅСЋ";
 			this->tabPage1->Click += gcnew System::EventHandler(this, &RootMenu::tabPage1_Click);
 			// 
 			// label4
@@ -167,7 +167,7 @@ namespace GraphicalShakerSorting {
 			this->tabPage4->Name = L"tabPage4";
 			this->tabPage4->Size = System::Drawing::Size(1408, 1005);
 			this->tabPage4->TabIndex = 3;
-			this->tabPage4->Text = L"Сортировка";
+			this->tabPage4->Text = L"РЎРѕСЂС‚РёСЂРѕРІРєР°";
 			this->tabPage4->Click += gcnew System::EventHandler(this, &RootMenu::tabPage4_Click);
 			// 
 			// label2
@@ -180,7 +180,7 @@ namespace GraphicalShakerSorting {
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(243, 25);
 			this->label2->TabIndex = 7;
-			this->label2->Text = L"Отсортированный массив:";
+			this->label2->Text = L"РћС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ:";
 			this->label2->Visible = false;
 			this->label2->Click += gcnew System::EventHandler(this, &RootMenu::label2_Click);
 			// 
@@ -194,7 +194,7 @@ namespace GraphicalShakerSorting {
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(383, 25);
 			this->label1->TabIndex = 6;
-			this->label1->Text = L"Введите элементы массива через запятую:";
+			this->label1->Text = L"Р’РІРµРґРёС‚Рµ СЌР»РµРјРµРЅС‚С‹ РјР°СЃСЃРёРІР° С‡РµСЂРµР· Р·Р°РїСЏС‚СѓСЋ:";
 			this->label1->Click += gcnew System::EventHandler(this, &RootMenu::label1_Click_1);
 			// 
 			// button2
@@ -212,7 +212,7 @@ namespace GraphicalShakerSorting {
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(201, 37);
 			this->button2->TabIndex = 5;
-			this->button2->Text = L"СОХРАНИТЬ";
+			this->button2->Text = L"РЎРћРҐР РђРќРРўР¬";
 			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Visible = false;
 			this->button2->Click += gcnew System::EventHandler(this, &RootMenu::button2_Click);
@@ -248,7 +248,7 @@ namespace GraphicalShakerSorting {
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(201, 37);
 			this->button1->TabIndex = 2;
-			this->button1->Text = L"СОРТИРОВАТЬ";
+			this->button1->Text = L"РЎРћР РўРР РћР’РђРўР¬";
 			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &RootMenu::button1_Click);
 			// 
@@ -275,7 +275,7 @@ namespace GraphicalShakerSorting {
 			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
 			this->tabPage2->Size = System::Drawing::Size(1408, 1005);
 			this->tabPage2->TabIndex = 1;
-			this->tabPage2->Text = L"Список массивов";
+			this->tabPage2->Text = L"РЎРїРёСЃРѕРє РјР°СЃСЃРёРІРѕРІ";
 			// 
 			// dataGridView1
 			// 
@@ -299,7 +299,7 @@ namespace GraphicalShakerSorting {
 			this->tabPage3->Name = L"tabPage3";
 			this->tabPage3->Size = System::Drawing::Size(1408, 1005);
 			this->tabPage3->TabIndex = 2;
-			this->tabPage3->Text = L"О нас";
+			this->tabPage3->Text = L"Рћ РЅР°СЃ";
 			this->tabPage3->UseVisualStyleBackColor = true;
 			// 
 			// linkLabel1
@@ -346,7 +346,7 @@ namespace GraphicalShakerSorting {
 			this->MaximizeBox = false;
 			this->Name = L"RootMenu";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"Приложение шейкерной сортировки";
+			this->Text = L"РџСЂРёР»РѕР¶РµРЅРёРµ С€РµР№РєРµСЂРЅРѕР№ СЃРѕСЂС‚РёСЂРѕРІРєРё";
 			this->TopMost = true;
 			this->Load += gcnew System::EventHandler(this, &RootMenu::RootMenu_Load);
 			this->tabControl1->ResumeLayout(false);
@@ -432,7 +432,7 @@ namespace GraphicalShakerSorting {
 
 			}
 			catch (...) {
-				MessageBox::Show(L"Ошибка. Проверьте корректность вводимых данных.", L"ебать ты шакал", MessageBoxButtons::OK, MessageBoxIcon::Error);
+				MessageBox::Show(L"РћС€РёР±РєР°. РџСЂРѕРІРµСЂСЊС‚Рµ РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚СЊ РІРІРѕРґРёРјС‹С… РґР°РЅРЅС‹С….", L"РћС€РёР±РєР°", MessageBoxButtons::OK, MessageBoxIcon::Error);
 			}
 		}
 	}
