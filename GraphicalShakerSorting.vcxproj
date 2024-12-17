@@ -82,7 +82,7 @@
       <CompileAs>Default</CompileAs>
     </ClCompile>
     <Link>
-      <AdditionalDependencies />
+      <AdditionalDependencies>..\ShakerSorting\sqlite3\x64\Debug\sqlite3.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>
       </EntryPointSymbol>
@@ -96,7 +96,7 @@
       <CompileAs>Default</CompileAs>
     </ClCompile>
     <Link>
-      <AdditionalDependencies />
+      <AdditionalDependencies>..\ShakerSorting\sqlite3\x64\Debug\sqlite3.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>
       </EntryPointSymbol>
@@ -109,7 +109,7 @@
       <CompileAs>Default</CompileAs>
     </ClCompile>
     <Link>
-      <AdditionalDependencies />
+      <AdditionalDependencies>..\ShakerSorting\sqlite3\x64\Debug\sqlite3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -119,7 +119,7 @@
       <CompileAs>Default</CompileAs>
     </ClCompile>
     <Link>
-      <AdditionalDependencies />
+      <AdditionalDependencies>..\ShakerSorting\sqlite3\x64\Debug\sqlite3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -133,8 +133,6 @@
     <ClCompile Include="Database.cpp" />
     <ClCompile Include="RootMenu.cpp" />
     <ClCompile Include="ShakerSorting.cpp" />
-    <ClCompile Include="sqlite3\shell.c" />
-    <ClCompile Include="sqlite3\sqlite3.c" />
     <ClCompile Include="SystemStrToStdstring.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -143,8 +141,6 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="ShakerSorting.h" />
-    <ClInclude Include="sqlite3\sqlite3.h" />
-    <ClInclude Include="sqlite3\sqlite3ext.h" />
     <ClInclude Include="SystemStrToStdstring.h" />
   </ItemGroup>
   <ItemGroup>
