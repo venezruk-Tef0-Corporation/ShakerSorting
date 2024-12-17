@@ -5,7 +5,7 @@
 
 using namespace std;
 
-void saveArrayToDB(string unsorted_array, const vector<int>& array) {
+void saveArrayToDB(string unsorted_array, string array) {
     sqlite3* db;
     sqlite3_open("arrays.db", &db);
 
@@ -17,17 +17,10 @@ void saveArrayToDB(string unsorted_array, const vector<int>& array) {
         "SortedArray TEXT);";
     sqlite3_exec(db, createTableSQL.c_str(), nullptr, nullptr, nullptr);
 
-    // Перевод массива в строку
-    string arrayString;
-    for (int num : array) {
-        arrayString += to_string(num) + ",";
-    }
-    if (!arrayString.empty()) arrayString.pop_back();
-
     //Добавление строки в таблицу
     string insertSQL =
         "INSERT INTO Arrays (UnsortedArray, SortedArray) VALUES ('"
-        + unsorted_array + "', '" + arrayString + "');";
+        + unsorted_array + "', '" + array + "');";
     sqlite3_exec(db, insertSQL.c_str(), nullptr, nullptr, nullptr);
 
     sqlite3_close(db);
