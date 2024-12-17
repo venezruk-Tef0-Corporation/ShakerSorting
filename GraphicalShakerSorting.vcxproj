@@ -126,6 +126,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Database.cpp" />
     <ClCompile Include="RootMenu.cpp" />
     <ClCompile Include="ShakerSorting.cpp" />
     <ClCompile Include="sqlite3\shell.c" />
@@ -133,6 +134,7 @@
     <ClCompile Include="SystemStrToStdstring.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Database.h" />
     <ClInclude Include="RootMenu.h">
       <FileType>CppForm</FileType>
     </ClInclude>

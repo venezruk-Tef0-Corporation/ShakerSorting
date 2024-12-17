@@ -1,0 +1,34 @@
+﻿#include <iostream>
+#include <vector>
+#include <string>
+#include "sqlite3/sqlite3.h"
+
+using namespace std;
+
+void saveArrayToDB(string unsorted_array, const vector<int>& array) {
+    sqlite3* db;
+    sqlite3_open("arrays.db", &db);
+
+    // Создать таблицу, если её нет
+    string createTableSQL =
+        "CREATE TABLE IF NOT EXISTS Arrays ("
+        "ID INTEGER PRIMARY KEY AUTOINCREMENT, "
+        "UnsortedArray TEXT, "
+        "SortedArray TEXT);";
+    sqlite3_exec(db, createTableSQL.c_str(), nullptr, nullptr, nullptr);
+
+    // Перевод массива в строку
+    string arrayString;
+    for (int num : array) {
+        arrayString += to_string(num) + ",";
+    }
+    if (!arrayString.empty()) arrayString.pop_back();
+
+    //Добавление строки в таблицу
+    string insertSQL =
+        "INSERT INTO Arrays (UnsortedArray, SortedArray) VALUES ('"
+        + unsorted_array + "', '" + arrayString + "');";
+    sqlite3_exec(db, insertSQL.c_str(), nullptr, nullptr, nullptr);
+
+    sqlite3_close(db);
+}
