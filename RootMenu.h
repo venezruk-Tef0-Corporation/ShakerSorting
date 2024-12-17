@@ -408,34 +408,45 @@ namespace GraphicalShakerSorting {
 
 		int size = static_cast<int>(SeparatedList.size());
 
+		int size = static_cast<int>(SeparatedList.size());
+
 		int* Array = new int[size];
 
-		for (int i = 0; i < size; i++) {
+		int number = 0;
 
-			try {
-				int number = stoi(SeparatedList[i]);
+		try {
+			for (int i = 0; i < size; i++) {
+
+				number = stoi(SeparatedList[i]);
 				Array[i] = number;
-				ShakerSorting(Array, size);
-
-				String^ LineSortedArray = "";
-				for (int i = 0; i < size - 1; i++) {
-					LineSortedArray += Array[i].ToString();
-					LineSortedArray += ", ";
-				}
-				LineSortedArray += Array[size - 1].ToString();
-
-				textBox6->Text = LineSortedArray;
-
-				button2->Visible = Enabled;
-				textBox6->Visible = Enabled;
-				label2->Visible = Enabled;
-
 
 			}
-			catch (...) {
-				MessageBox::Show(L"Ошибка. Проверьте корректность вводимых данных.", L"Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
-			}
+
+
 		}
+		catch (...) {
+			button2->Visible = false;
+			textBox6->Visible = false;
+			label2->Visible = false;
+			MessageBox::Show(L"Ошибка. Проверьте корректность вводимых данных.", L"Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+		ShakerSorting(Array, size);
+
+		String^ LineSortedArray = "";
+
+		for (int i = 0; i < size - 1; i++) {
+
+			LineSortedArray += Array[i].ToString();
+			LineSortedArray += ", ";
+
+		}
+		LineSortedArray += Array[size - 1].ToString();
+
+		textBox6->Text = LineSortedArray;
+
+		button2->Visible = true;
+		textBox6->Visible = true;
+		label2->Visible = true;
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ LineUnsortedArray = "";
