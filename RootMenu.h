@@ -408,8 +408,6 @@ namespace GraphicalShakerSorting {
 
 		int size = static_cast<int>(SeparatedList.size());
 
-		int size = static_cast<int>(SeparatedList.size());
-
 		int* Array = new int[size];
 
 		int number = 0;
