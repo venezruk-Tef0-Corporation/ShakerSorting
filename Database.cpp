@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 #include <vector>
 #include <string>
-#include "..\ShakerSorting\sqlite3\sqlite3\sqlite3.h"
+#include "..\git\sqlite3\sqlite3\sqlite3.h"
 
 using namespace std;
 
