@@ -2,6 +2,7 @@
 
 #include "ShakerSorting.h"
 #include "SystemStrToStdstring.h"
+#include "Database.h"
 #include <string>
 #include <sstream>
 #include <vector>
@@ -456,6 +457,8 @@ namespace GraphicalShakerSorting {
 
 		LineSortedArray = textBox6->Text;
 		StringSortedLine = ToStdstring(LineSortedArray);
+
+		saveArrayToDB(StringUnsortedLine, StringSortedLine);
 
 
 	}
