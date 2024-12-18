@@ -1,0 +1,3 @@
+C:\Users\Dmitriev Maxim\OneDrive\Рабочий стол\git\ShakerSorting\Graphica.2D257334\x64\Debug\GraphicalShakerSorting.vcxproj.AssemblyReference.cache
+C:\Users\Dmitriev Maxim\OneDrive\Рабочий стол\git\ShakerSorting\Graphica.2D257334\x64\Debug\GraphicalShakerSorting.RootMenu.resources
+C:\Users\Dmitriev Maxim\OneDrive\Рабочий стол\git\ShakerSorting\Graphica.2D257334\x64\Debug\GraphicalShakerSorting.vcxproj.GenerateResource.cache
