@@ -88,7 +88,7 @@
       <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>
       </EntryPointSymbol>
-      <AdditionalOptions>/ignore:4075 /ignore:4248 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/ignore:4075 /ignore:4248 /ignore:4099 %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -105,7 +105,7 @@
       <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>
       </EntryPointSymbol>
-      <AdditionalOptions>/ignore:4075 /ignore:4248 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/ignore:4075 /ignore:4248 /ignore:4099 %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
