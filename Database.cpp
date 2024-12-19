@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <vector>
 #include <string>
 #include "..\ShakerSorting\sqlite3\sqlite3\sqlite3.h"
@@ -53,7 +53,7 @@ void saveArrayToDB(string unsorted_array, string array) {
     sqlite3* db;
     sqlite3_open("arrays.db", &db);
 
-    // Создать таблицу, если её нет
+    // РЎРѕР·РґР°С‚СЊ С‚Р°Р±Р»РёС†Сѓ, РµСЃР»Рё РµС‘ РЅРµС‚
     string createTableSQL =
         "CREATE TABLE IF NOT EXISTS Arrays ("
         "ID INTEGER PRIMARY KEY AUTOINCREMENT, "
@@ -61,7 +61,7 @@ void saveArrayToDB(string unsorted_array, string array) {
         "SortedArray TEXT);";
     sqlite3_exec(db, createTableSQL.c_str(), nullptr, nullptr, nullptr);
 
-    //Добавление строки в таблицу
+    //Р”РѕР±Р°РІР»РµРЅРёРµ СЃС‚СЂРѕРєРё РІ С‚Р°Р±Р»РёС†Сѓ
     string insertSQL =
         "INSERT INTO Arrays (UnsortedArray, SortedArray) VALUES ('"
         + unsorted_array + "', '" + array + "');";

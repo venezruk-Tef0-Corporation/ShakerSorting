@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 
 #include "..\ShakerSorting\sqlite3\sqlite3\sqlite3.h"
 #include "Database.h"
@@ -13,7 +13,7 @@ namespace GraphicalShakerSorting {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Сводка для MyForm1
+	/// РЎРІРѕРґРєР° РґР»СЏ MyForm1
 	/// </summary>
 	public ref class MyForm1 : public System::Windows::Forms::Form
 	{
@@ -22,13 +22,13 @@ namespace GraphicalShakerSorting {
 		{
 			InitializeComponent();
 			//
-			//TODO: добавьте код конструктора
+			//TODO: РґРѕР±Р°РІСЊС‚Рµ РєРѕРґ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°
 			//
 		}
 
 	protected:
 		/// <summary>
-		/// Освободить все используемые ресурсы.
+		/// РћСЃРІРѕР±РѕРґРёС‚СЊ РІСЃРµ РёСЃРїРѕР»СЊР·СѓРµРјС‹Рµ СЂРµСЃСѓСЂСЃС‹.
 		/// </summary>
 		~MyForm1()
 		{
@@ -46,14 +46,14 @@ namespace GraphicalShakerSorting {
 
 	private:
 		/// <summary>
-		/// Обязательная переменная конструктора.
+		/// РћР±СЏР·Р°С‚РµР»СЊРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°.
 		/// </summary>
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Требуемый метод для поддержки конструктора — не изменяйте 
-		/// содержимое этого метода с помощью редактора кода.
+		/// РўСЂРµР±СѓРµРјС‹Р№ РјРµС‚РѕРґ РґР»СЏ РїРѕРґРґРµСЂР¶РєРё РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° вЂ” РЅРµ РёР·РјРµРЅСЏР№С‚Рµ 
+		/// СЃРѕРґРµСЂР¶РёРјРѕРµ СЌС‚РѕРіРѕ РјРµС‚РѕРґР° СЃ РїРѕРјРѕС‰СЊСЋ СЂРµРґР°РєС‚РѕСЂР° РєРѕРґР°.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -75,7 +75,7 @@ namespace GraphicalShakerSorting {
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(98, 33);
 			this->button2->TabIndex = 3;
-			this->button2->Text = L"УДАЛИТЬ";
+			this->button2->Text = L"РЈР”РђР›РРўР¬";
 			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Click += gcnew System::EventHandler(this, &MyForm1::button2_Click);
 			// 
@@ -91,7 +91,7 @@ namespace GraphicalShakerSorting {
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(98, 33);
 			this->button1->TabIndex = 4;
-			this->button1->Text = L"ОТМЕНА";
+			this->button1->Text = L"РћРўРњР•РќРђ";
 			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm1::button1_Click);
 			// 
@@ -103,8 +103,8 @@ namespace GraphicalShakerSorting {
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(396, 67);
 			this->label1->TabIndex = 5;
-			this->label1->Text = L"Вы точно хотите удалить все строки из таблицы\? Это действие будет необратимо. Что"
-				L"бы отменить удаление, нажмите \"ОТМЕНА\".";
+			this->label1->Text = L"Р’С‹ С‚РѕС‡РЅРѕ С…РѕС‚РёС‚Рµ СѓРґР°Р»РёС‚СЊ РІСЃРµ СЃС‚СЂРѕРєРё РёР· С‚Р°Р±Р»РёС†С‹\? Р­С‚Рѕ РґРµР№СЃС‚РІРёРµ Р±СѓРґРµС‚ РЅРµРѕР±СЂР°С‚РёРјРѕ. Р§С‚Рѕ"
+				L"Р±С‹ РѕС‚РјРµРЅРёС‚СЊ СѓРґР°Р»РµРЅРёРµ, РЅР°Р¶РјРёС‚Рµ \"РћРўРњР•РќРђ\".";
 			// 
 			// MyForm1
 			// 
@@ -124,7 +124,7 @@ namespace GraphicalShakerSorting {
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximizeBox = false;
 			this->Name = L"MyForm1";
-			this->Text = L"Подтверждение удаления";
+			this->Text = L"РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ СѓРґР°Р»РµРЅРёСЏ";
 			this->TopMost = true;
 			this->ResumeLayout(false);
 
@@ -140,16 +140,16 @@ namespace GraphicalShakerSorting {
 		int rc = sqlite3_open_v2("arrays.db", &db, SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, nullptr);
 
 		if (rc != SQLITE_OK) {
-			MessageBox::Show("Ошибка открытия базы данных: " + gcnew System::String(sqlite3_errmsg(db)));
+			MessageBox::Show("РћС€РёР±РєР° РѕС‚РєСЂС‹С‚РёСЏ Р±Р°Р·С‹ РґР°РЅРЅС‹С…: " + gcnew System::String(sqlite3_errmsg(db)));
 			ErrorFlag = true;
 			return;
 		}
 
 		deleteAllArrays(db);
 
-		if (sqlite3_changes(db) == 0) MessageBox::Show("Строки не найдены", L"", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		if (sqlite3_changes(db) == 0) MessageBox::Show("РЎС‚СЂРѕРєРё РЅРµ РЅР°Р№РґРµРЅС‹", L"", MessageBoxButtons::OK, MessageBoxIcon::Error);
 
-		else MessageBox::Show("Строки удалены", L"", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		else MessageBox::Show("РЎС‚СЂРѕРєРё СѓРґР°Р»РµРЅС‹", L"", MessageBoxButtons::OK, MessageBoxIcon::Information);
 
 		sqlite3_close(db);
 
