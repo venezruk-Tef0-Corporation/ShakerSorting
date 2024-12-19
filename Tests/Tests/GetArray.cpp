@@ -56,6 +56,7 @@ void GetArray() {
     auto diff = end - start;
     auto diff_milsec = std::chrono::duration_cast<std::chrono::milliseconds>(diff).count();
     double diff_sec = static_cast<double>(diff_milsec)/1000;
+    cout << "Тест выполнен успешно" << endl;
     cout << "Время выполнения теста для 1 массива (в секундах): " << diff_sec/100 << endl;
     cout << "Время выполнения теста (в секундах): " << diff_sec << endl;
 }
