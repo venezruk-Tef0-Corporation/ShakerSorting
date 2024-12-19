@@ -143,12 +143,20 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Database.cpp" />
+    <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="MyForm1.cpp" />
     <ClCompile Include="RootMenu.cpp" />
     <ClCompile Include="ShakerSorting.cpp" />
     <ClCompile Include="SystemStrToStdstring.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Database.h" />
+    <ClInclude Include="MyForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyForm1.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="RootMenu.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -156,6 +164,12 @@
     <ClInclude Include="SystemStrToStdstring.h" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="MyForm.resx">
+      <DependentUpon>MyForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm1.resx">
+      <DependentUpon>MyForm1.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RootMenu.resx">
       <DependentUpon>RootMenu.h</DependentUpon>
     </EmbeddedResource>
