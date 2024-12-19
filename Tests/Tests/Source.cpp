@@ -8,6 +8,7 @@
 
 using namespace std;
 
+//Функция вывода главного меню
 void ShowMainMenu() {
     cout << "ГЛАВНОЕ МЕНЮ" << endl;
     cout << "Выберите пункт меню: " << endl;
@@ -22,8 +23,10 @@ void ShowMainMenu() {
 
 int main() {
 
+    //Установка кодовой страницы в поток ввода
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
+    //Инициализация генератора случайных чисел
     srand(time(0));
 
     int choice = 0;

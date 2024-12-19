@@ -10,14 +10,17 @@ using namespace std;
 
 void AddArrayToDB(int num) {
 
+    //Запуск таймера
     auto start = std::chrono::steady_clock::now();
 
+    //Удаление таблицы
     sqlite3* db;
     sqlite3_open("arrays.db", &db);
     string dropTableSQL = "DROP TABLE arrays";
     sqlite3_exec(db, dropTableSQL.c_str(), nullptr, nullptr, nullptr);
     sqlite3_close(db);
 
+    //Доваление в таблицу num строчек
     for (int i = 0; i < num; i++) {
         int size=rand()%101+1;
         int* unsorted_array = new int[size];
@@ -42,7 +45,7 @@ void AddArrayToDB(int num) {
         saveArrayToDB(unsorted_line, sorted_line);
     }
 
-
+    //Остановка таймера
     auto end = std::chrono::steady_clock::now();
     auto diff = end - start;
     auto diff_milsec = std::chrono::duration_cast<std::chrono::milliseconds>(diff).count();

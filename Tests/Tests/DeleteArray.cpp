@@ -6,11 +6,14 @@
 #include "Database.h"
 
 void DeleteArray() {
+    //Запуск таймера
     auto start = std::chrono::steady_clock::now();
+    //Открытие базы данных
     sqlite3* db;
     sqlite3_open("arrays.db", &db);
     deleteAllArrays(db);
     sqlite3_close(db);
+    //Остановка таймера
     auto end = std::chrono::steady_clock::now();
     auto diff = end - start;
     auto diff_milsec = std::chrono::duration_cast<std::chrono::milliseconds>(diff).count();

@@ -10,7 +10,7 @@
 using namespace std;
 
 void GetArray() {
-
+    //Запуск таймера
     auto start = std::chrono::steady_clock::now();
 	for (int i = 0; i < 100; i++) {
         sqlite3* db;
@@ -52,6 +52,7 @@ void GetArray() {
         ShakerSorting(Array, size);
 
 	}
+    //Остановка таймера
     auto end = std::chrono::steady_clock::now();
     auto diff = end - start;
     auto diff_milsec = std::chrono::duration_cast<std::chrono::milliseconds>(diff).count();
