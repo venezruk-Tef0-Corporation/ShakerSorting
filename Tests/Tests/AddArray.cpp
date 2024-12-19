@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <vector>
 #include <string>
 #include <chrono>
@@ -47,6 +47,6 @@ void AddArrayToDB(int num) {
     auto diff = end - start;
     auto diff_milsec = std::chrono::duration_cast<std::chrono::milliseconds>(diff).count();
     double diff_sec = static_cast<double>(diff_milsec) / 1000;
-    cout << "Òåñò âûïîëíåí óñïåøíî" << endl;
-    cout << "Âðåìÿ âûïîëíåíèÿ òåñòà (â ñåêóíäàõ): " << diff_sec << endl;
+    cout << "Ð¢ÐµÑÑ‚ Ð²Ñ‹Ð¿Ð¾Ð»Ð½ÐµÐ½ ÑƒÑÐ¿ÐµÑˆÐ½Ð¾" << endl;
+    cout << "Ð’Ñ€ÐµÐ¼Ñ Ð²Ñ‹Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ñ Ñ‚ÐµÑÑ‚Ð° (Ð² ÑÐµÐºÑƒÐ½Ð´Ð°Ñ…): " << diff_sec << endl;
 }

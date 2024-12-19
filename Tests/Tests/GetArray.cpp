@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <vector>
 #include <string>
 #include <chrono>
@@ -15,27 +15,27 @@ void GetArray() {
 	for (int i = 0; i < 100; i++) {
         sqlite3* db;
 
-        // Открываем базу данных
+        // РћС‚РєСЂС‹РІР°РµРј Р±Р°Р·Сѓ РґР°РЅРЅС‹С…
         sqlite3_open("arrays.db", &db);
 
         const char* sql = "SELECT UnsortedArray FROM Arrays ORDER BY RANDOM() LIMIT 1;";
         sqlite3_stmt* stmt;
 
-        // Подготавливаем запрос
+        // РџРѕРґРіРѕС‚Р°РІР»РёРІР°РµРј Р·Р°РїСЂРѕСЃ
         sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr);
 
         string arrayString;
 
-        // Выполняем запрос
+        // Р’С‹РїРѕР»РЅСЏРµРј Р·Р°РїСЂРѕСЃ
         sqlite3_step(stmt);
         const char* unsortedArray = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 0));
           
         arrayString = string(unsortedArray);
 
-        // Освобождаем ресурсы
+        // РћСЃРІРѕР±РѕР¶РґР°РµРј СЂРµСЃСѓСЂСЃС‹
         sqlite3_finalize(stmt);
 
-        // Преобразование строки в массив целых чисел
+        // РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ СЃС‚СЂРѕРєРё РІ РјР°СЃСЃРёРІ С†РµР»С‹С… С‡РёСЃРµР»
         vector<string> array;
         stringstream ss(arrayString);
         string number;
@@ -56,7 +56,7 @@ void GetArray() {
     auto diff = end - start;
     auto diff_milsec = std::chrono::duration_cast<std::chrono::milliseconds>(diff).count();
     double diff_sec = static_cast<double>(diff_milsec)/1000;
-    cout << "Тест выполнен успешно" << endl;
-    cout << "Время выполнения теста для 1 массива (в секундах): " << diff_sec/100 << endl;
-    cout << "Время выполнения теста (в секундах): " << diff_sec << endl;
+    cout << "РўРµСЃС‚ РІС‹РїРѕР»РЅРµРЅ СѓСЃРїРµС€РЅРѕ" << endl;
+    cout << "Р’СЂРµРјСЏ РІС‹РїРѕР»РЅРµРЅРёСЏ С‚РµСЃС‚Р° РґР»СЏ 1 РјР°СЃСЃРёРІР° (РІ СЃРµРєСѓРЅРґР°С…): " << diff_sec/100 << endl;
+    cout << "Р’СЂРµРјСЏ РІС‹РїРѕР»РЅРµРЅРёСЏ С‚РµСЃС‚Р° (РІ СЃРµРєСѓРЅРґР°С…): " << diff_sec << endl;
 }
