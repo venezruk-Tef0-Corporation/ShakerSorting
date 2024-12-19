@@ -1,15 +1,8 @@
+// Подключаемые формы
 #include "MyForm.h"
 
-using namespace System;
-using namespace System::Windows::Forms;
+/* В данном файле может быть описана точка входа в программу,
+   но, так как эта форма не является главной, то описание отсутствует;
+   Описание точки входа в программу расположено в файле "RootMenu.cpp" */
 
-[STAThreadAttribute]
-
-void __clrcall DeleteByIDCall(System::String^ arg) {
-
-	Application::EnableVisualStyles();
-	Application::SetCompatibleTextRenderingDefault(false);
-	GraphicalShakerSorting::MyForm Form;
-	Application::Run(% Form);
-
-}
+// Конец файла

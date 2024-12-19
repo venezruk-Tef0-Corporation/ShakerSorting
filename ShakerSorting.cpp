@@ -1,8 +1,9 @@
-﻿//Директивы препроцессора
+﻿// Подключаемые библиотеки
 #include <iostream>                                   
 
-//Пространства имен
-using namespace std;
+using namespace std; /* Using namespace std в C++ — это директива, 
+						которая позволяет использовать все идентификаторы 
+						из пространства имён std без указания префикса std:: */
 
 /// <summary>Функция сортировки массива</summary>
 /// <param name="ArrayForSorting"> - Исходный массив</param>
@@ -46,3 +47,5 @@ void ShakerSorting(int* ArrayForSorting, int SizeOfArray) {
 	}
 
 }
+
+// Конец файла

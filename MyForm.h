@@ -1,11 +1,24 @@
-﻿#pragma once
+﻿#pragma once /* #pragma once — это директива препроцессора, 
+				которая указывает компилятору включить файл 
+				заголовка только один раз при компиляции файла 
+				исходного кода */
 
+// Подключаемые файлы проекта
 #include "SystemStrToStdstring.h"
-#include <string>
-#include "..\ShakerSorting\sqlite3\sqlite3\sqlite3.h"
 #include "Database.h"
 
-namespace GraphicalShakerSorting {
+// Подключаемые библиотеки
+#include <string>
+#include "..\ShakerSorting\sqlite3\sqlite3\sqlite3.h"
+
+
+namespace GraphicalShakerSorting {			  /* Пространство имён (namespace) в C++ — это группа 
+												 взаимосвязанных функций, переменных, констант, классов, 
+												 объектов и других компонентов программы. 
+
+                                                 Оно позволяет группировать идентификаторы 
+												 (например, переменные, функции, классы) в отдельные области, 
+												 что помогает избежать конфликтов имён и упрощает организацию кода */
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -39,6 +52,8 @@ namespace GraphicalShakerSorting {
 				delete components;
 			}
 		}
+
+	// Объявление элементов формы
 	private: System::Windows::Forms::Label^ label1;
 	protected:
 	private: System::Windows::Forms::TextBox^ textBox1;
@@ -51,6 +66,10 @@ namespace GraphicalShakerSorting {
 		/// </summary>
 		System::ComponentModel::Container^ components;
 
+/* #pragma region позволяет указать блок кода,
+	который можно развернуть или свернуть при
+	использовании функции структурирования редактора
+	Visual Studio */
 #pragma region Windows Form Designer generated code
 		/// <summary>
 		/// Требуемый метод для поддержки конструктора — не изменяйте 
@@ -145,13 +164,20 @@ namespace GraphicalShakerSorting {
 			this->PerformLayout();
 
 		}
+
+// #pragma endregion помечает конец #pragma region блока
 #pragma endregion
+
+	/* Ниже расположены обработки событий,
+	   которые могут быть вызваны в процессе работы программы */
 
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
+
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();
 	}
+
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		bool ErrorFlag = false;
@@ -205,6 +231,7 @@ namespace GraphicalShakerSorting {
 
 	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
-
 	};
 }
+
+// Конец файла

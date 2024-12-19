@@ -1,18 +1,36 @@
-﻿#pragma once
+﻿#pragma once /* #pragma once — это директива препроцессора, 
+				которая указывает компилятору включить файл 
+				заголовка только один раз при компиляции файла 
+				исходного кода */
 
+// Подключаемые файлы проекта
 #include "ShakerSorting.h"
 #include "SystemStrToStdstring.h"
 #include "Database.h"
+
+// Подключаемые библиотеки
 #include <string>
 #include <sstream>
 #include <vector>
 #include "..\ShakerSorting\sqlite3\sqlite3\sqlite3.h"
 
+// Подключаемые формы
 #include "MyForm.h"
 #include "MyForm1.h"
-using namespace std;
 
-namespace GraphicalShakerSorting {
+using namespace std; /* Using namespace std в C++ — это директива, 
+						которая позволяет использовать все идентификаторы 
+						из пространства имён std без указания префикса std:: */
+
+
+
+namespace GraphicalShakerSorting {            /* Пространство имён (namespace) в C++ — это группа 
+												 взаимосвязанных функций, переменных, констант, классов, 
+												 объектов и других компонентов программы. 
+
+                                                 Оно позволяет группировать идентификаторы 
+												 (например, переменные, функции, классы) в отдельные области, 
+												 что помогает избежать конфликтов имён и упрощает организацию кода */
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -46,30 +64,23 @@ namespace GraphicalShakerSorting {
 				delete components;
 			}
 		}
+
+	// Объявление элементов формы
 	private: System::Windows::Forms::TabControl^ tabControl1;
 	protected:
 	private: System::Windows::Forms::TabPage^ tabPage1;
 	private: System::Windows::Forms::TabPage^ tabPage2;
 	private: System::Windows::Forms::TabPage^ tabPage3;
-
-
 	private: System::Windows::Forms::LinkLabel^ linkLabel1;
-
 	private: System::Windows::Forms::TabPage^ tabPage4;
-
 	private: System::Windows::Forms::Button^ button1;
-
 	private: System::Windows::Forms::Button^ button2;
-
-
 	private: System::Windows::Forms::TextBox^ textBox5;
 	private: System::Windows::Forms::TextBox^ textBox6;
-
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::Label^ label5;
-
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button4;
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
@@ -83,6 +94,12 @@ namespace GraphicalShakerSorting {
 		/// </summary>
 		System::ComponentModel::Container^ components;
 
+
+
+/* #pragma region позволяет указать блок кода, 
+	который можно развернуть или свернуть при 
+	использовании функции структурирования редактора 
+	Visual Studio */
 #pragma region Windows Form Designer generated code
 		/// <summary>
 		/// Требуемый метод для поддержки конструктора — не изменяйте 
@@ -452,11 +469,15 @@ namespace GraphicalShakerSorting {
 		}
 
 
+// #pragma endregion помечает конец #pragma region блока
 #pragma endregion
 
+	/* Ниже расположены обработки событий, 
+	   которые могут быть вызваны в процессе работы программы */
 
 	private: System::Void tabPage1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+
 	private: System::Void RootMenu_Load(System::Object^ sender, System::EventArgs^ e) {
 
 		sqlite3* db;
@@ -502,25 +523,35 @@ namespace GraphicalShakerSorting {
 		sqlite3_finalize(stmt);
 		sqlite3_close(db);
 	}
+
 	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
+
 	private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
+
 	private: System::Void linkLabel1_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) {
 		System::Diagnostics::Process::Start("https://github.com/venezruk-Tef0-Corporation");
 	}
+
 	private: System::Void textBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
+
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+
 	private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
+
 	private: System::Void textBox6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
+
 	private: System::Void tabPage4_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+
 	private: System::Void textBox5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
+
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		bool ErrorFlag = false;
@@ -586,6 +617,7 @@ namespace GraphicalShakerSorting {
 		}
 
 	}
+
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		String^ LineUnsortedArray = "";
@@ -605,22 +637,29 @@ namespace GraphicalShakerSorting {
 
 	private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+
 	private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+
 	private: System::Void label1_Click_1(System::Object^ sender, System::EventArgs^ e) {
 	}
+
 	private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+
 	private: System::Void label4_Click_1(System::Object^ sender, System::EventArgs^ e) {
 	}
+
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		MyForm^ DeleteForm = gcnew MyForm();
 		DeleteForm->Show();
 
 	}
+
 	private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 	}
+
 	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		dataGridView1->Rows->Clear();
@@ -653,6 +692,7 @@ namespace GraphicalShakerSorting {
 		sqlite3_close(db);
 
 	}
+
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		MyForm1^ DeleteAllForm = gcnew MyForm1();
@@ -661,3 +701,5 @@ namespace GraphicalShakerSorting {
 	}
 	};
 }
+
+// Конец файла
